@@ -1,0 +1,9 @@
+[submodule "controller"]
+	path = controller
+	url = git@github.com:among-us-bot/aque-controller.git
+[submodule "worker-manager"]
+	path = worker-manager
+	url = git@github.com:among-us-bot/aque-worker-manager.git
+[submodule "worker"]
+	path = worker
+	url = git@github.com:among-us-bot/aque-worker.git
