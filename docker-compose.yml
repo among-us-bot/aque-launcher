@@ -1,6 +1,18 @@
 version: "3"
 services:
+  controller:
+    build:
+      context: controller
+      dockerfile: Dockerfile
+    links:
+      - worker-manager
+  worker-manager:
+    build:
+      context: worker-manager
+      dockerfile: Dockerfile
   worker:
     build:
       context: worker
       dockerfile: Dockerfile
+    links:
+      - worker-manager
