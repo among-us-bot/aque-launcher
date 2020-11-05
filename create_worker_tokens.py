@@ -3,7 +3,7 @@ Created by Epic at 11/5/20
 """
 from ujson import dumps
 
-tokens = {}
+tokens = []
 
 while True:
     worker_name = input("Name (cancel to cancel)> ")
@@ -12,4 +12,4 @@ while True:
     if worker_name == "cancel":
         print(dumps(tokens))
         break
-    tokens[worker_name] = worker_token
+    tokens.append({"name": worker_name, "token": worker_token})
