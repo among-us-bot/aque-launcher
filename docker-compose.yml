@@ -6,6 +6,7 @@ services:
       dockerfile: Dockerfile
     links:
       - worker-manager
+      - database
     env_file:
       - .env
   worker-manager:
@@ -22,3 +23,6 @@ services:
       - worker-manager
     env_file:
       - .env
+
+  database:
+    image: mongo
