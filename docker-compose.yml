@@ -26,3 +26,8 @@ services:
 
   database:
     image: mongo
+    volumes:
+      - aque_database:/data/db
+
+volumes:
+  aque_database:
