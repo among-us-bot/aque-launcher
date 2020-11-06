@@ -6,5 +6,6 @@ for directory in current_dir.glob("*"):
     if not directory.is_dir():
         continue
     chdir(str(directory))
+    print(f"Updating {directory}!")
     system("git pull")
     chdir("../")
