@@ -7,3 +7,6 @@
 [submodule "worker"]
 	path = worker
 	url = git@github.com:among-us-bot/aque-worker.git
+[submodule "dashboard"]
+	path = dashboard
+	url = git@github.com:among-us-bot/aque-dashboard.git
