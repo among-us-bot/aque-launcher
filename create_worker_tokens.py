@@ -9,7 +9,7 @@ while True:
     worker_name = input("Name (cancel to cancel)> ")
     worker_token = input("Token> ")
 
-    if worker_name == "cancel":
+    if worker_name == "cancel" or len(worker_name) == 0:
         print(dumps(tokens))
         break
     tokens.append({"name": worker_name, "token": worker_token})
