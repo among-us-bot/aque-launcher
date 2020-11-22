@@ -14,4 +14,5 @@ for directory in current_dir.glob("*"):
 if "--commit" in argv:
     system("git add .")
     system("git commit -m 'Dependencies: Update modules'")
+    system("git push")
 
