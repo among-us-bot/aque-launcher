@@ -1,5 +1,6 @@
 from os import chdir, system
 from pathlib import Path
+from sys import argv
 
 current_dir = Path()
 for directory in current_dir.glob("*"):
@@ -9,3 +10,8 @@ for directory in current_dir.glob("*"):
     print(f"Updating {directory}!")
     system("git pull")
     chdir("../")
+
+if "--commit" in argv:
+    system("git add .")
+    system("git commit -m 'Dependencies: Update modules'")
+
