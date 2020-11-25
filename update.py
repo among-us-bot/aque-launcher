@@ -8,7 +8,7 @@ for directory in current_dir.glob("*"):
         continue
     chdir(str(directory))
     print(f"Updating {directory}!")
-    system("git pull")
+    system("git pull origin master")
     chdir("../")
 
 if "--commit" in argv:
