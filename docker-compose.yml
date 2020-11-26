@@ -23,6 +23,10 @@ services:
       - worker-manager
     env_file:
       - .env
+  delivery:
+    build:
+      context: prometheus-delivery
+      dockerfile: Dockerfile
   dashboard:
     build:
       context: dashboard
@@ -36,6 +40,21 @@ services:
     image: mongo
     volumes:
       - aque_database:/data/db
+  prometheus:
+    image: prom/prometheus:v2.22.1
+    volumes:
+      - ./prometheus-config.yml:/etc/prometheus/prometheus:
+    links:
+      - delivery
 
+  grafana:
+    image: grafana/grafana:7.3.4
+    ports:
+      - 3000:3000
+    links:
+      - prometheus
+    volumes:
+      - aque_grafana:/var/lib/grafana
 volumes:
   aque_database:
+  aque_grafana:

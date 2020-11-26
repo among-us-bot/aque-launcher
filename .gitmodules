@@ -10,3 +10,6 @@
 [submodule "dashboard"]
 	path = dashboard
 	url = git@github.com:among-us-bot/aque-dashboard.git
+[submodule "prometheus-delivery"]
+	path = prometheus-delivery
+	url = git@github.com:among-us-bot/prometheus-delivery.git
