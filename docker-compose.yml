@@ -37,7 +37,7 @@ services:
       - 8080:8080
 
   database:
-    image: mongo
+    image: mongo:4.4.2
     volumes:
       - aque_database:/data/db
   prometheus:
