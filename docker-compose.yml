@@ -46,7 +46,7 @@ services:
   prometheus:
     image: prom/prometheus:v2.22.1
     volumes:
-      - ./prometheus-config.yml:/etc/prometheus/prometheus
+      - ./prometheus-config.yml:/etc/prometheus/prometheus.yml
     links:
       - delivery
     ports:
