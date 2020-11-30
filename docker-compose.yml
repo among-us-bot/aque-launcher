@@ -58,6 +58,8 @@ services:
       - prometheus
     volumes:
       - aque_grafana:/var/lib/grafana
+    env_file:
+      - .env
 
 volumes:
   aque_database:
